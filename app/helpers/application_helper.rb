@@ -8,4 +8,15 @@ module ApplicationHelper
        date_us.strftime("%d/%m/%Y") 
     end
     
+    
+    def environment_detect
+        if Rails.env.production?
+            "Produção"
+        elsif Rails.env.development?
+            "Desenvolvimento"
+        else
+            "Teste"
+        end
+    end
+    
 end

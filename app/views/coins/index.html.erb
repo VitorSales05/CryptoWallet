@@ -15,6 +15,7 @@
   <tbody>
     <% @coins.each do |coin| %>
       <tr>
+        <td><%= coin.id %></td>
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td><%= image_tag coin.url_image, size: "35x35" %></td>
@@ -28,6 +29,5 @@
 
 <br>
 <%= link_to 'New Coin', new_coin_path %>
-
 <br>
-<%= link_to 'Boas-Vindas!', welcome_index_path %>
+<%= link_to 'Home Page', welcome_index_path %>

@@ -2,8 +2,10 @@
 <h1>Seja Bem-Vindo! \o/</h1>
 <p><strong>Data: <%= date_br(Date.today) %></strong></p>
 
-<ul>
-    <li>
-        <%= link_to "Cadastro de Moedas", coins_path %>
-    </li>
-</ul>
+<!--O 'render' é responsável por carregar as Partials que são blocos de código reaproveitáveis, como Cabeçalhos e Rodapés-->
+
+<%= render "menu" %>
+
+<p>Atualmente a aplicação está no ambiente de <strong><%= environment_detect %></strong></p>
+
+<p>Meu nome é <strong><%= @meu_nome %></strong> e tenho <strong><%= @minha_idade %></strong> anos.</p>  
