@@ -15,7 +15,6 @@
   <tbody>
     <% @coins.each do |coin| %>
       <tr>
-        <td><%= coin.id %></td>
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td><%= image_tag coin.url_image, size: "35x35" %></td>
