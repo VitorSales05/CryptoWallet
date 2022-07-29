@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :mining_types
   # destes dois modos pode ser criada apenas uma rota para uma página espicífica
   get 'welcome/index'
   #get 'welcome', to: 'welcome#index'
