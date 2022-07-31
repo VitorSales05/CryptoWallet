@@ -1,7 +1,10 @@
 class CoinsController < ApplicationController
   layout "adm"
   
-  before_action :set_coin, only: %i[ show edit update destroy ]
+  # 'before_action' define que uma variável PRIVADA será executada antes de determinados metodos
+  # 'only' define que a variável será executada SOMENTE quando determinados métodos forem chamado
+  before_action :set_coin, only: [:show, :edit, :update, :destroy]
+  before_action :mining_type_options, only: [:new, :create, :edit, :update]
 
   # GET /coins or /coins.json
   def index
@@ -60,6 +63,11 @@ class CoinsController < ApplicationController
   end
 
   private
+    # Metodo privado que pesquisa os tipos de mineração sem burlar a arquitetura MVC
+    def mining_type_options
+      @mining_type_options = MiningType.all.pluck(:description, :id)
+    end
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_coin
       @coin = Coin.find(params[:id])
@@ -67,6 +75,6 @@ class CoinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def coin_params
-      params.require(:coin).permit(:description, :acronym, :url_image)
+      params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id)
     end
 end
