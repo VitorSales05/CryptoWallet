@@ -1,6 +1,9 @@
 
 <h1>Seja Bem-Vindo! \o/</h1>
-<p><strong>Data: <%= date_br(Date.today) %></strong></p>
+
+<p>O idioma que está sendo utilizado é: <strong><%= t('idioma_atual') %></strong></p>
+<p><%= t('hello') %></p>
+<p><strong>Data: <%= l(Date.today) %></strong></p>
 
 <!--O 'render' é responsável por carregar as Partials que são blocos de código reaproveitáveis, como Cabeçalhos e Rodapés-->
 

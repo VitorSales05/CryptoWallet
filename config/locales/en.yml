@@ -30,4 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello World"
+  idioma_atual: "English"
+  coins:
+    title: "Coins"
+  mining_type:
+    title: "Mining Type"
+  new_mining_type: "New Mining Type"
+  home_page: "Home Page"
+    
+    
+  
