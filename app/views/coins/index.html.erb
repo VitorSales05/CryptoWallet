@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
-<h1><%= @coins.human_attribute_name(:coin) %></h1>
+<h1><%= @coins.model_name.human(count: 5) %></h1>
 
 <table border="1px">
   <thead>
@@ -22,13 +22,13 @@
         <td><%= coin.mining_type.description %></td>
         <td><%= link_to t('links.show'), coin %></td>
         <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
-        <td><%= link_to t('links.destroy'), coin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.destroy'), coin, method: :delete, data: { confirm: t('delete_alert') } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-<%= link_to t('new_mining_type'), new_coin_path %>
+
+<%= link_to t('new_coin'), new_coin_path %>
 <br>
 <%= link_to t('home_page'), welcome_index_path %>

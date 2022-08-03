@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 
-<h1><%= t('mining_type.title') %></h1>
+<h1><%= @mining_types.model_name.human(count: 3) %></h1>
 
 <table border="1px">
   <thead>
     <tr>
-      <th width="140px"><%= t('mining_type.description') %></th>
-      <th width="140px"><%= t('mining_type.acronym') %></th>
+      <th width="140px"><%= @mining_types.human_attribute_name(:description) %></th>
+      <th width="140px"><%= @mining_types.human_attribute_name(:acronym) %></th>
       <th width="240px" colspan="3"></th>
     </tr>
   </thead>
@@ -19,12 +19,11 @@
         <td><%= mining_type.acronym %></td>
         <td><%= link_to t('links.show'), mining_type %></td>
         <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t('links.destroy'), mining_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.destroy'), mining_type, method: :delete, data: { confirm: t('delete_alert') } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to t('new_mining_type'), new_mining_type_path %>

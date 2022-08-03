@@ -1,7 +1,7 @@
 'pt-BR':
   activerecord:
     models:
-      coin: 
+      coin:
         one: "Moeda"
         other: "Moedas"
       mining_type: 
@@ -22,4 +22,3 @@
         acronym: "Sigla"
         updated_at: "Atualizado em"
         created_at: "Criado em"
-        

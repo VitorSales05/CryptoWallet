@@ -1,19 +1,14 @@
 "pt-BR":
-  hello: "Olá Mundo!"
-  idioma_atual: "Português-BR"
-  coins:
-    title: "Moedas"
-    # description: "Descrição"
-    # acronym: "Sigla"
-    # url_image: "Icone"
-    # mining_type: "Tipo de Mineração"
-  mining_type:
-    title: "Tipos de Mineração"
-    description: "Descrição"
-    acronym: "Sigla"
+  salutation: "Seja Bem-Vindo! °o°"
+  actual_locale: "Português-BR"
+  home_page: "Página Inicial"
   links:
     show: "Mostrar"
     edit: "Editar"
     destroy: "Apagar"
+    back: "Voltar"
   new_mining_type: "Novo Tipo de Mineração"
-  home_page: "Página Inicial"
+  new_coin: "Nova Moeda"
+  edit_coin: "Editar Moeda"
+  edit_mining_type: "Editar Tipo de Mineração"
+  delete_alert: "Realmente deseja apagar?"
