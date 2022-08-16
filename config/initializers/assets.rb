@@ -11,4 +11,18 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-# Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+
+# Utilizado para que ao acessar uma página o navegador carregue apenas os assets
+# referêntes a aquela determinada página, e não todos os assets
+Rails.application.config.assets.precompile += %w( cable.js 
+                                                  coins.js 
+                                                  mining_types.js
+                                                  welcome.js
+                                                 )
+
+Rails.application.config.assets.precompile += %w( coins.css 
+                                                  mining_types.css
+                                                  scaffolds.css
+                                                  welcome.css
+                                                 )

@@ -1,14 +1,13 @@
 <p>
-  <%= link_to 'Português', '/?locale=pt-BR' %>
+  <%= link_to 'Português', root_path(locale: 'pt-BR') %>
 </p>
 <p>
-  <%= link_to 'English', '/?locale=en' %>
+  <%= link_to 'English', root_path(locale: 'en') %>
 </p>
+</br>
 
 <h1> <%= t('salutation') %></h1>
-
 <p>O idioma que está sendo utilizado é: <strong><%= t('actual_locale') %></strong></p>
-</br>
 <p><strong>Data: <%= l(Date.today) %></strong></p>
 
 <!--O 'render' é responsável por carregar as Partials que são blocos de código reaproveitáveis, como Cabeçalhos e Rodapés-->

@@ -1,6 +1,6 @@
 class MiningTypesController < ApplicationController
-
-layout "adm"
+  # faz com que a página utilize um layout específico, e não o padrão da aplicação
+# layout "adm"
 
   before_action :set_mining_type, only: %i[ show edit update destroy ]
 

@@ -1,5 +1,6 @@
 class CoinsController < ApplicationController
-  layout "adm"
+  # faz com que a página utilize um layout específico, e não o padrão da aplicação
+# layout "adm"
   
   # 'before_action' define que uma variável PRIVADA será executada antes de determinados metodos
   # 'only' define que a variável será executada SOMENTE quando determinados métodos forem chamado
